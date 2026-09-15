@@ -5,7 +5,8 @@ fn main() {
     io::stdin().read_line(&mut buffer).unwrap();
     let n : i8 = buffer.trim().parse().unwrap();
 
-    let mut buffer = String::new();
+    buffer.clear();
+    
     io::stdin().read_to_string(&mut buffer).unwrap();
     let mut tokens = buffer.trim().split_whitespace();
 
