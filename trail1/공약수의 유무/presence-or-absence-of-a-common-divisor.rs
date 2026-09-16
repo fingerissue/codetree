@@ -13,6 +13,7 @@ fn main() {
     for i in a..=b {
         if 1920 % i == 0 && 2880 % i == 0 {
             is_gongyaksu = true;
+            break;
         }
     }
 
