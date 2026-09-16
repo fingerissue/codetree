@@ -10,6 +10,7 @@ fn main() {
     for i in 2..n {
         if n % i == 0 {
             is_hapsungsu = true;
+            break;
         }
     }
 
