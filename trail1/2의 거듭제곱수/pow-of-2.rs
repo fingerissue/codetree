@@ -6,13 +6,9 @@ fn main() {
     let mut n : i16 = buffer.trim().parse().unwrap();
     let mut cnt = 0;
 
-    loop {
+    while n > 1{
         n /= 2;
         cnt += 1;
-        
-        if n == 1 {
-            break;
-        }
     }
 
     println!("{}", cnt);
