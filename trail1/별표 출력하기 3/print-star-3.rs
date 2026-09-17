@@ -10,7 +10,7 @@ fn main() {
             print!("  ");
         }
         
-        for _ in (0..2 * n - 2 * i - 1).rev() {
+        for _ in 0..2 * n - 2 * i - 1 {
             print!("* ");
         }
         print!("\n");
