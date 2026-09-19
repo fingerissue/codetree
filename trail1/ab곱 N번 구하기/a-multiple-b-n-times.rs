@@ -16,8 +16,8 @@ fn main() {
         let b : i8 = tokens.next().unwrap().parse().unwrap();
         mul = 1;
 
-        for i in a..=b {
-            mul *= i as i32;
+        for j in a..=b {
+            mul *= j as i32;
         }
         println!("{}", mul);
     }
