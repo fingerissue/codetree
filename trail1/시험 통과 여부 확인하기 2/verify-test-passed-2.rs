@@ -5,7 +5,7 @@ fn main() {
     io::stdin().read_line(&mut buffer).unwrap();
     let n : usize = buffer.trim().parse().unwrap();
 
-    let mut scores : [bool; 10] = [false; 10];
+    let mut pass_result : [bool; 10] = [false; 10];
 
     for i in 0..n {
         buffer.clear();
@@ -14,20 +14,20 @@ fn main() {
 
         let mut sum = 0;
 
-        for i in 0..4 {
+        for _ in 0..4 {
             let token : i32 = tokens.next().unwrap().parse().unwrap();
             sum += token;
         }
 
         if sum / 4 >= 60 {
-            scores[i] = true;
+            pass_result[i] = true;
         }
     }
 
     let mut cnt = 0;
     for i in 0..n {
-        println!("{}", if scores[i] { "pass" } else { "fail" });
-        if scores[i] {
+        println!("{}", if pass_result[i] { "pass" } else { "fail" });
+        if pass_result[i] {
             cnt += 1;
         }
     }
