@@ -7,18 +7,18 @@ fn main () {
     
     let mut a : i32 = tokens.next().unwrap().parse().unwrap();
     let mut b : i32 = tokens.next().unwrap().parse().unwrap();
-    let mut reminders : [i32; 10] = [0; 10];
+    let mut remainders : [i32; 10] = [0; 10];
     let mut result = 0;
 
     while a > 1 {
-        let reminder = a % b;
-        reminders[reminder as usize] += 1;
+        let remainder = a % b;
+        remainders[remainder as usize] += 1;
 
         a /= b;
     }
 
-    for reminder in reminders {
-        result += reminder * reminder;
+    for remainder in remainders {
+        result += remainder * remainder;
     }
     println!("{result}");
 }
